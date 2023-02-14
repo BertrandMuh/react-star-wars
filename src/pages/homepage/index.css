@@ -1,0 +1,4 @@
+.page {
+    display: grid;
+    grid-template-rows: 60px auto 50px;
+}

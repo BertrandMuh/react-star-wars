@@ -1,0 +1,21 @@
+#header {
+    background: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* position: absolute; */
+}
+
+#title {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    color: white;
+}
+
+#header,
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
