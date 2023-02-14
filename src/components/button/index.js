@@ -5,6 +5,11 @@ import "./index.css"
 const Button = (props) => {
 
     let { next, pageNum, setPageNum } = props;
+    // let nextPage = next;
+    if (Number(next) !== pageNum && next !== 'null' && next === 'object') {
+        console.log(typeof (next), 'next: ', next)
+        console.log(typeof (pageNum), 'page: ', pageNum);
+    };
 
     const getAdditionalShips = async (e) => {
         let btn = e.target
@@ -12,37 +17,19 @@ const Button = (props) => {
 
         let isButton = btn.nodeName === 'BUTTON';
         if (isButton) {
-            console.log('as' + next);
-            if (next !== 'object') {
+
+            console.log(typeof (next));
+
+            if (Number(next) !== pageNum) {
                 let page = Number(pageNumber.textContent) + Number(btn.value)
-                console.log(typeof (next));
                 if (page < 1) {
                     page = 1
                 }
                 setPageNum(page)
             }
 
-
-            // else if (next === 'object') {
-            //     page = Number(pageNumber.textContent)
-            // }
-            // setPageNum(page)
-
-            // let data = await requestThePage(page);
-            // // console.log(data);
-            // let shipsContainer = document.getElementById('ships-container');
-            // while (shipsContainer.firstChild) {
-            //     shipsContainer.removeChild(shipsContainer.firstChild)
-            // }
-            // let names = data.results.map(item => {
-            //     return (
-            //         <div key={item.url}>{item.name}</div>
-            //     )
-            // })
-            //     console.log(names);
-            //     setShipNameList(names)
         }
-
+        console.log('as' + next, pageNum);
 
     }
 
