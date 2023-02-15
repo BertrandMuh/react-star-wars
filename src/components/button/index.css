@@ -1,3 +1,14 @@
 .page-number {
     margin: 0 10px;
 }
+
+.page-num-div {
+    width: max-content;
+    margin: auto;
+}
+
+.btn-container {
+    width: max-content;
+    margin: auto;
+    display: flex;
+}
