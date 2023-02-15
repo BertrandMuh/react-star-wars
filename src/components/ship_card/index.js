@@ -2,10 +2,10 @@
 import "./index.css"
 
 const Card = (props) => {
-
+    const shipNames = props.shipNames
     return (
         <div id="ships-container">
-            {props.shipNames}
+            {shipNames}
         </div>
     )
 }

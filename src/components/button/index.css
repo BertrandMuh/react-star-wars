@@ -1,14 +1,25 @@
+.page-num-div,
+.page-number,
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .page-number {
     margin: 0 10px;
 }
 
-.page-num-div {
+.page-num-div,
+.btn-container {
     width: max-content;
     margin: auto;
 }
 
-.btn-container {
-    width: max-content;
-    margin: auto;
-    display: flex;
+.selected-pge {
+    color: white;
+    background: firebrick;
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 }

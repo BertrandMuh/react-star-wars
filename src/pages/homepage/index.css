@@ -1,4 +1,11 @@
 .page {
     display: grid;
     grid-template-rows: 60px auto 50px;
+    height: 100vh;
+}
+
+.loading {
+    margin: auto;
+    font-weight: 500;
+    font-size: 30px;
 }

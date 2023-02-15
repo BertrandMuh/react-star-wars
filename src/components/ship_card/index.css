@@ -5,6 +5,7 @@
     max-width: 1200px;
     width: 95%;
     margin: 50px auto 20px auto;
+    height: max-content;
 }
 
 #ships-container>div {
