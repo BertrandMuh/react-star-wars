@@ -8,6 +8,8 @@ import Button from "../../components/button";
 import { getAllShipNAmes } from "../../components/functions/useful-functions";
 
 const Homepage = () => {
+
+
     const [shipNameList, setShipNameList] = useState([])
     let isFirstRender = useRef(true)
     // make the AJAX request once the app loads
@@ -24,32 +26,12 @@ const Homepage = () => {
     }, []);
 
     const returnButton = () => {
-        if (shipNameList.length === 0) {
-            return (
-                <div></div>
-            )
-        }
-        else {
-            return (
-                <Button setShipNameList={setShipNameList} />
-            )
-        }
+        return (shipNameList.length === 0 ? <div></div> : <Button setShipNameList={setShipNameList} returnCard={returnCard} />)
     }
 
     const returnCard = () => {
-        if (shipNameList.length === 0) {
-            return (
-                <div className="loading">Loading...</div>
-            )
-        }
-        else {
-            return (
-                <Card shipNames={shipNameList} />
-            )
-        }
+        return (shipNameList.length === 0 ? <div className="loading">Loading...</div> : <Card shipNames={shipNameList} />)
     }
-
-    console.log(setShipNameList);
 
     return (
         <div className="page">
