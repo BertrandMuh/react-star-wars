@@ -17,6 +17,10 @@
     margin: auto;
 }
 
+.btn-container {
+    margin-bottom: 20px;
+}
+
 .selected-pge {
     color: blue;
     text-decoration: underline;
